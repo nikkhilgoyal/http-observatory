@@ -12,7 +12,7 @@ with open(os.path.join(__dirname, 'README.md')) as readme:
     README = readme.read()
 
 setup(
-    name='httpobs',
+    name='httpobs_final',
     version=VERSION,
     description='HTTP Observatory: a set of tests and tools to scan your website for basic web hygeine.',
     url=SOURCE_URL,
@@ -36,14 +36,14 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'beautifulsoup4==4.6.3',
-        'celery==4.2.1',
-        'psutil==5.9.0',
-        'publicsuffixlist==0.7.12',
-        'requests==2.27.1',
+        'beautifulsoup4',
+        'celery',
+        'psutil',
+        'publicsuffixlist',
+        'requests',
+        'vine',
     ],
     scripts=['httpobs/scripts/httpobs-local-scan',
-             'httpobs/scripts/httpobs-mass-scan',
              'httpobs/scripts/httpobs-scan-worker'],
     zip_safe=False,
 )
